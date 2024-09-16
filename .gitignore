@@ -138,6 +138,7 @@ hw-venv/
 # Rope project settings
 .ropeproject
 settings.py
+/Telegram-bot/bot.log
 
 # mkdocs documentation
 /site
