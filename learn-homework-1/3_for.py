@@ -17,11 +17,11 @@
 
 def total_num_sales_product(products):
     # Посчитать и вывести суммарное количество продаж для каждого товара
-    sum_numb = 0
-    key_name = ''
+    print('Выводим суммарное количество продаж для каждого товара:')
 
     for prod in products:
         for key, values in prod.items():
+            sum_numb = 0
             if isinstance(values, str):
                 key_name = values
                 continue
@@ -32,17 +32,50 @@ def total_num_sales_product(products):
 
 def average_num_salesproduct(products):
     # Посчитать и вывести среднее количество продаж для каждого товара
-    pass
+    sum_numb = 0
+    print('Выводим среднее количество продаж для каждого товара:')
+
+    for prod in products:
+        for key, values in prod.items():
+            sum_numb = 0
+            if isinstance(values, str):
+                key_name = values
+                continue
+            for num in values:
+                sum_numb += num
+            print(f"{key_name}: {sum_numb/len(values)}")
 
 
 def total_num_sales_products(products):
     # Посчитать и вывести суммарное количество продаж всех товаров
-    pass
+    sum_numb = 0
+
+    for prod in products:
+        for key, values in prod.items():
+            if isinstance(values, str):
+                key_name = values
+                continue
+            for num in values:
+                sum_numb += num
+    
+    print(f'Выводим суммарное количество продаж для каждого товара: {sum_numb}')
 
 
 def average_num_salesproducts(products):
     # Посчитать и вывести среднее количество продаж всех товаров
-    pass
+    sum_numb = 0
+    sum_aver = 0
+
+    for prod in products:
+        for key, values in prod.items():
+            if isinstance(values, str):
+                key_name = values
+                continue
+            for num in values:
+                sum_numb += num
+                sum_aver += len(values)
+    
+    print(f'Выводим суммарное количество продаж для каждого товара: {sum_numb/sum_aver}')
 
 
 def main():
